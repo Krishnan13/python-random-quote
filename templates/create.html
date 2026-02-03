@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>{% block title %} ಹೊಸ ಬ್ಲಾಗ್ ಬರೆಯಿರಿ {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">ಶೀರ್ಷಿಕೆ</label>
+        <input type="text" name="title" placeholder="ಬ್ಲಾಗ್ ಶೀರ್ಷಿಕೆ"
+               class="form-control" value="{{ request.form['title'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">ವಿಷಯ</label>
+        <textarea name="content" placeholder="ಇಲ್ಲಿ ಬರೆಯಿರಿ..."
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">ಸಲ್ಲಿಸು</button>
+    </div>
+</form>
+{% endblock %}
