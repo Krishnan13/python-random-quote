@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %} {% endblock %} - ಕನ್ನಡ ಬ್ಲಾಗ್</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">ಕನ್ನಡ ಬ್ಲಾಗ್</a>
+        <a href="{{ url_for('index') }}">ಮುಖಪುಟ</a>
+        <a href="{{ url_for('create') }}">ಬ್ಲಾಗ್ ಬರೆಯಿರಿ</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
